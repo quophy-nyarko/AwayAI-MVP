@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "AwayAI",
+    "slug": "awayai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "awayai",
+    "android": {
+      "package": "ai.arena.awayai",
+      "permissions": ["INTERNET"],
+      "softwareKeyboardLayoutMode": "resize"
+    },
+    "web": {
+      "bundler": "metro",
+      "name": "AwayAI"
+    },
+    "plugins": [
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+services:
+  awayai:
+    build: .
+    ports:
+      - "8787:8787"
+    env_file:
+      - .env
+    volumes:
+      - awayai-data:/app/apps/server/data
+    restart: unless-stopped
+
+volumes:
+  awayai-data:

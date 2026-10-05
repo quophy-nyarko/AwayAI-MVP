@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.local
+.expo/
+web-build/
+dist/
+coverage/
+apps/server/data/store.json
+apps/server/data/*.tmp
+*.log
+.DS_Store
