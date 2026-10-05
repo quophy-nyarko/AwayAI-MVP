@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 COPY . .
 RUN npm install
-RUN npm --workspace apps/server run build
+RUN cd apps/server && npm run build
 WORKDIR /app/apps/server
 RUN mkdir -p /app/apps/server/data
 EXPOSE 8787
