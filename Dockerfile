@@ -1,19 +1,12 @@
-FROM node:22-alpine AS build
+FROM node:22-alpine
 WORKDIR /app
 COPY package*.json ./
-COPY apps/server/package*.json ./apps/server/
-RUN npm install --workspace apps/server --include-workspace-root
-COPY apps/server ./apps/server
+COPY . .
+RUN npm install
 RUN npm --workspace apps/server run build
-
-FROM node:22-alpine AS runtime
-WORKDIR /app
-ENV NODE_ENV=production
-COPY package*.json ./
-COPY apps/server/package*.json ./apps/server/
-RUN npm install --workspace apps/server --include-workspace-root --omit=dev
-COPY --from=build /app/apps/server/dist ./apps/server/dist
-RUN mkdir -p /app/apps/server/data
 WORKDIR /app/apps/server
+RUN mkdir -p /app/apps/server/data
 EXPOSE 8787
+ENV PORT=8787
+ENV NODE_ENV=production
 CMD ["node", "dist/index.js"]
