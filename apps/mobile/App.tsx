@@ -6,10 +6,10 @@ import { SafeAreaProvider, SafeAreaView, useSafeAreaInsets } from "react-native-
 import { AwayApi } from "./src/lib/api";
 import { loadApiConfig, saveApiConfig } from "./src/lib/storage";
 import { mockConversations, mockDashboard, mockSettings } from "./src/lib/mock";
-import { HomeScreen } from "./src/screens/HomeScreen";
-import { InboxScreen } from "./src/screens/InboxScreen";
-import { KnowledgeScreen } from "./src/screens/KnowledgeScreen";
-import { SettingsScreen } from "./src/screens/SettingsScreen";
+import  HomeScreen  from "./src/screens/HomeScreen";
+import  InboxScreen  from "./src/screens/InboxScreen";
+import  KnowledgeScreen  from "./src/screens/KnowledgeScreen";
+import  SettingsScreen  from "./src/screens/SettingsScreen";
 import { colors, radii } from "./src/theme";
 import type {
   ApiConfig,
