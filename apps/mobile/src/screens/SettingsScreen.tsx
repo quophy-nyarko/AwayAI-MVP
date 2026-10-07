@@ -35,9 +35,12 @@ await SecureStore.setItemAsync('adminToken', adminToken.trim());
 await SecureStore.setItemAsync('userName', name.trim());
 await SecureStore.setItemAsync('userBusiness', business.trim());
 
-const cleanUrl = serverUrl.trim().replace(//$/, '');
-setStatus('Connecting...');
-const response = await fetch(cleanUrl + '/api/profile', {
+let cleanUrl = serverUrl.trim();
+      if (cleanUrl.endsWith('/')) {
+        cleanUrl = cleanUrl.slice(0, -1);
+      }
+      setStatus('Connecting...');
+      const response = await fetch(cleanUrl + '/api/profile', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken.trim() },
 body: JSON.stringify({ name: name.trim(), business: business.trim(), role: business.trim() }),
