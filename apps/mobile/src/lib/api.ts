@@ -65,7 +65,12 @@ export class AwayApi {
       ...init,
       headers: {
         "Content-Type": "application/json",
-        ...(this.config.token ? { Authorization: `Bearer ${this.config.token}` } : {}),
+        ...(this.config.token ? {
+Authorization: `Bearer ${this.config.token}`,
+"x-admin-token": this.config.token,
+"x-app-token": this.config.token,
+"X-Admin-Token": this.config.token
+} : {}),
         ...init.headers,
       },
     });
