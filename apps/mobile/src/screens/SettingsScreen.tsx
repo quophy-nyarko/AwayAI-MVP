@@ -44,7 +44,7 @@ let cleanUrl = serverUrl.trim();
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': Bearer ${adminToken.trim()}
+    'Authorization': `Bearer ${adminToken.trim()}`
   }
 });
 
