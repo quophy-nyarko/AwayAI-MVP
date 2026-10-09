@@ -40,10 +40,12 @@ let cleanUrl = serverUrl.trim();
         cleanUrl = cleanUrl.slice(0, -1);
       }
       setStatus('Connecting...');
-      const response = await fetch(cleanUrl + '/api/profile', {
-method: 'POST',
-headers: { 'Content-Type': 'application/json', 'x-admin-token': adminToken.trim() },
-body: JSON.stringify({ name: name.trim(), business: business.trim(), role: business.trim() }),
+      const response = await fetch(cleanUrl + '/api/settings', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': Bearer ${adminToken.trim()}
+  }
 });
 
 const text = await response.text();
