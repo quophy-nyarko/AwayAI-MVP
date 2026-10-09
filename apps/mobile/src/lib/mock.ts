@@ -7,7 +7,7 @@ export const mockSettings: AssistantSettings = {
   businessName: "GideonAI",
   awayMessage: "Auto-reply: Gideon is not available at the moment, but I can help with a few questions.",
   knowledge:
-    "Gideon helps small businesses with brand strategy and digital design.\nWorking hours: Monday to Friday, 9:00 AM to 6:00 PM Gulf Standard Time.\nDiscovery calls are 30 minutes and can be requested for the next working day.\nProject prices are confirmed personally by Alex after a discovery call.",
+    "Gideon helps small businesses with brand strategy and digital design.\nWorking hours: Monday to Friday, 9:00 AM to 6:00 PM Gulf Standard Time.\nDiscovery calls are 30 minutes and can be requested for the next working day.\nProject prices are confirmed personally by Gideon after a discovery call.",
   tone: "warm",
   fallbackMessage:
     "I don't have enough approved information to answer that. I've saved your message for Gideon to review when available.",
