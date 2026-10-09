@@ -3,14 +3,14 @@ import type { AssistantSettings, ConversationSummary, DashboardData } from "../t
 export const mockSettings: AssistantSettings = {
   assistantEnabled: true,
   awayMode: true,
-  ownerName: "Alex",
-  businessName: "Studio North",
-  awayMessage: "Auto-reply: Alex is not available at the moment, but I can help with a few questions.",
+  ownerName: "Gideon",
+  businessName: "GideonAI",
+  awayMessage: "Auto-reply: Gideon is not available at the moment, but I can help with a few questions.",
   knowledge:
-    "Studio North helps small businesses with brand strategy and digital design.\nWorking hours: Monday to Friday, 9:00 AM to 6:00 PM Gulf Standard Time.\nDiscovery calls are 30 minutes and can be requested for the next working day.\nProject prices are confirmed personally by Alex after a discovery call.",
+    "Gideon helps small businesses with brand strategy and digital design.\nWorking hours: Monday to Friday, 9:00 AM to 6:00 PM Gulf Standard Time.\nDiscovery calls are 30 minutes and can be requested for the next working day.\nProject prices are confirmed personally by Alex after a discovery call.",
   tone: "warm",
   fallbackMessage:
-    "I don't have enough approved information to answer that. I've saved your message for Alex to review when available.",
+    "I don't have enough approved information to answer that. I've saved your message for Gideon to review when available.",
   blockedTopics: "Passwords, private chats, payment details, legal or medical advice, and binding commitments.",
   maxHistoryMessages: 12,
   maxReplyCharacters: 700,
@@ -39,7 +39,7 @@ export const mockConversations: ConversationSummary[] = [
       },
       {
         id: "2",
-        body: "I can note that you prefer tomorrow morning. Alex will confirm the exact time when available.",
+        body: "I can note that you prefer tomorrow morning. Gideon will confirm the exact time when available.",
         role: "assistant",
         timestamp: iso(3),
       },
@@ -62,7 +62,7 @@ export const mockConversations: ConversationSummary[] = [
       },
       {
         id: "4",
-        body: "I can't approve a final price on Alex's behalf. I've flagged this for a personal reply.",
+        body: "I can't approve a final price on Gideon's behalf. I've flagged this for a personal reply.",
         role: "assistant",
         timestamp: iso(28),
       },
